@@ -1,0 +1,5 @@
+main.hxml
+-hl out/hl/main.hl
+
+--next
+-cmd make pumpkin.hdll

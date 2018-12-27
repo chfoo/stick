@@ -1,0 +1,11 @@
+<xml>
+    <files id="haxe">
+        <compilerflag value="-I${this_dir}/"/>
+        <file name="${this_dir}/example.c">
+            <depend name="${this_dir}/example.h"/>
+        </file>
+    </files>
+    <target id="haxe">
+    </target>
+    <echo value="build.xml: ${this_dir}"/>
+</xml>

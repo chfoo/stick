@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition>
+    <!-- Function signature definition file.
+
+    * nativeType: C data type. This is treated as a raw string.
+    * haxeType: Haxe data type. This is treated as a raw string.
+    * bindType: an enum value used within Stick
+    -->
+    <function>
+        <name>pumpkin_add</name>
+        <doc>Add two numbers and return the result.</doc>
+        <parameter name="a" nativeType="int32_t" haxeType="stick.Int32" bindType="int32" />
+        <parameter name="b" nativeType="int32_t" haxeType="stick.Int32" bindType="int32" />
+        <return nativeType="int32_t" haxeType="stick.Int32" bindType="int32" />
+    </function>
+    <function>
+        <name>pumpkin_read</name>
+        <doc>Reads the first few bytes from the given filename.</doc>
+        <parameter name="filename" nativeType="const char *" haxeType="stick.CharArrayPointer" bindType="char-array" />
+        <parameter name="buffer" nativeType="uint8_t *" haxeType="stick.ByteArrayPointer" bindType="byte-array" />
+        <parameter name="buffer_length" nativeType="size_t" haxeType="stick.Int32" bindType="int32" />
+        <parameter name="bytes_read" nativeType="size_t *" haxeType="stick.Pointer&lt;stick.UInt64&gt;" bindType="uint64-pointer" />
+        <return nativeType="int" haxeType="Int" bindType="int32" />
+    </function>
+    <function>
+        <name>pumpkin_concat</name>
+        <doc>Concatenates two strings.</doc>
+        <parameter name="text1" nativeType="const char *" haxeType="stick.CharArrayPointer" bindType="char-array" />
+        <parameter name="text2" nativeType="const char *" haxeType="stick.CharArrayPointer" bindType="char-array" />
+        <return nativeType="const char *" haxeType="stick.CharArrayPointer" bindType="char-array" />
+    </function>
+</definition>

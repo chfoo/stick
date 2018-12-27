@@ -1,0 +1,7 @@
+# IDE files
+.vscode/
+
+# Transpilation and compilation output files
+example/pumpkin/out/
+out/
+test/manual/out/

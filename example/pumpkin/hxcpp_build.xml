@@ -1,0 +1,15 @@
+<xml>
+    <!-- This file contains additional compilation config to be used during hxcpp's auto compilation -->
+    <files id="haxe">
+        <compilerflag value="-I${this_dir}/../../src/stick/" />
+        <compilerflag value="-I${haxelib:stick}/src/stick/" if="haxelib:stick" />
+        <compilerflag value="-I${this_dir}/libpumpkin/" />
+        <compilerflag value="-I${this_dir}/gen/" />
+        <file name="${this_dir}/libpumpkin/pumpkin.c">
+            <depend name="${this_dir}/libpumpkin/pumpkin.h" />
+        </file>
+        <file name="${this_dir}/gen/pumpkin_stick_wrapper.c" />
+    </files>
+    <target id="haxe">
+    </target>
+</xml>

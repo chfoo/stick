@@ -1,0 +1,5 @@
+-main example.Main
+-cp ./
+-cp gen/
+-cp ../../src/
+-debug

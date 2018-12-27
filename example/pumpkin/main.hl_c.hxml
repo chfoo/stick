@@ -1,0 +1,5 @@
+main.hxml
+-hl out/hl/main.c
+
+--next
+-cmd make all
