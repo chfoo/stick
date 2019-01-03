@@ -8,7 +8,8 @@ haxe:
 install:
   - sudo apt-get install libpng16-dev libjpeg-turbo8-dev libturbojpeg libvorbis-dev libopenal-dev libsdl2-dev libmbedtls-dev libuv1-dev
   - sudo ln -s /usr/lib/x86_64-linux-gnu/libturbojpeg.so.0 /usr/lib/x86_64-linux-gnu/libturbojpeg.so
-  - pushd example/pumpkin/ && yes | haxelib install main.cpp.hxml main.hl.hxml && popd
+  - yes | haxelib install hxcpp hashlink
+  - pushd example/pumpkin/ && yes | haxelib install main.hxml && popd
   - wget --content-disposition https://github.com/HaxeFoundation/hashlink/archive/1.8.tar.gz
   - tar -xzvf hashlink-1.8.tar.gz
   - pushd hashlink-1.8 && make && PREFIX=/usr/ sudo make install && popd
