@@ -49,10 +49,10 @@ To generate the wrapper code for the pumpkin example:
 
 To build the example application:
 
-    haxelib install app.cpp.hxml app.hl.hxml
-    haxe app.cpp.hxml
-    haxe app.hl.hxml
-    haxe app.hl_c.hxml
+    haxelib install main.cpp.hxml main.hl.hxml
+    haxe main.cpp.hxml
+    haxe main.hl.hxml
+    haxe main.hl_c.hxml
 
 Run the example application:
 

@@ -1,0 +1,21 @@
+language: haxe
+
+haxe:
+  - "4.0.0-preview.5"
+
+install:
+  - yes | haxelib install example/pumpkin/main.cpp.hxml example/pumpkin/main.hl.hxml
+  - wget https://github.com/HaxeFoundation/hashlink/archive/1.8.tar.gz
+  - tar -xzvf hashlink-1.8.tar.gz
+  - pushd hashlink-1.8 && make && sudo make install && popd
+
+script:
+  - haxe hxml/app.neko.hxml
+  - cd example/pumpkin/
+  - neko ../../out/neko/app.n config.xml definitions.xml
+  - haxe main.cpp.hxml
+  - haxe main.hl.hxml
+  - haxe main.hl_c.hxml
+  - ./run.cpp.sh
+  - ./run.hl.sh
+  - ./run.hl_c.sh
