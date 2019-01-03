@@ -4,7 +4,7 @@ haxe:
   - "4.0.0-preview.5"
 
 install:
-  - yes | haxelib install example/pumpkin/main.cpp.hxml example/pumpkin/main.hl.hxml
+  - pushd example/pumpkin/ && yes | haxelib install main.cpp.hxml main.hl.hxml && popd
   - wget https://github.com/HaxeFoundation/hashlink/archive/1.8.tar.gz
   - tar -xzvf hashlink-1.8.tar.gz
   - pushd hashlink-1.8 && make && sudo make install && popd
