@@ -10,7 +10,7 @@ class Main {
         trace("3 + 5 = ");
         var addResult = Pumpkin.add(3, 5);
         trace('  $addResult');
-        success = success && addResult == 5;
+        success = success && addResult == 8;
 
         var filename = "example/Main.hx";
         trace('Read $filename');
