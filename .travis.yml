@@ -11,11 +11,11 @@ install:
   - pushd example/pumpkin/ && yes | haxelib install main.cpp.hxml main.hl.hxml && popd
   - wget --content-disposition https://github.com/HaxeFoundation/hashlink/archive/1.8.tar.gz
   - tar -xzvf hashlink-1.8.tar.gz
-  - pushd hashlink-1.8 && make && sudo make install && popd
+  - pushd hashlink-1.8 && make && PREFIX=/usr/ sudo make install && popd
 
 script:
   - haxe hxml/app.neko.hxml
-  - cd example/pumpkin/
+  - pushd example/pumpkin/
   - neko ../../out/neko/app.n config.xml definitions.xml
   - haxe main.cpp.hxml
   - haxe main.hl.hxml
@@ -23,3 +23,4 @@ script:
   - ./run.cpp.sh
   - ./run.hl.sh
   - ./run.hl_c.sh
+  - popd
