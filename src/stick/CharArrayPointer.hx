@@ -22,7 +22,7 @@ abstract CharArrayPointer(NativeCharArrayPointer) {
         #if cpp
         return new CharArrayPointer(cpp.ConstCharStar.fromString(text));
         #elseif hl
-        var bytes = Bytes.ofString(text);
+        var bytes = haxe.io.Bytes.ofString(text);
         return new CharArrayPointer(bytes.getData().bytes);
         #else
         return null;
