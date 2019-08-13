@@ -3,6 +3,9 @@ Stick
 
 Experimental, proof-of-concept Haxe foreign function binding tool.
 
+**Note**: You may be interested in more mature projects such as **[callfunc](https://github.com/chfoo/callfunc)** and **[ammer](https://github.com/Aurel300/ammer)**. This project won't be updated anymore.
+
+
 Workflow overview
 -----------------
 
